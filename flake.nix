@@ -1,5 +1,5 @@
 {
-  description = "eframe devShell";
+  description = "crab os devshell";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -23,9 +23,11 @@
 
         rust = pkgs.rust-bin.nightly.latest.default.override {
           extensions = [
-            "rust-src"
             "llvm-tools-preview"
+            "rust-analyzer"
+            "rust-src"
           ];
+          # so it can build for bare metal x86_64
           targets = [ "thumbv7em-none-eabihf" ];
         };
       in

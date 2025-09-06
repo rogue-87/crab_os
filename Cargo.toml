@@ -1,7 +1,7 @@
 [package]
 name = "crab_os"
 version = "0.1.0"
-edition = "2018"
+edition = "2024"
 
 [profile.dev]
 panic = "abort" # disable stack unwinding on panic
@@ -12,5 +12,7 @@ panic = "abort" # disable stack unwinding on panic
 [dependencies]
 bootloader = "0.9"
 
-# [lib]
-# crate_type = ["staticlib"]
+[[bin]]
+name = "crab_os"
+test = false
+bench = false

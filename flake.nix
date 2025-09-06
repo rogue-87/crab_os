@@ -27,7 +27,7 @@
             "rust-analyzer"
             "rust-src"
           ];
-          # so it can build for bare metal x86_64
+          # so it can build for Bare Armv7E-M, hardfloat
           targets = [ "thumbv7em-none-eabihf" ];
         };
       in

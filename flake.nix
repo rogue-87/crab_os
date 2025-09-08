@@ -38,6 +38,7 @@
             # Rust
             rust
             cargo-bootimage
+            qemu
           ];
         };
       }

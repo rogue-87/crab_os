@@ -27,8 +27,10 @@
             "rust-analyzer"
             "rust-src"
           ];
-          # so it can build for Bare Armv7E-M, hardfloat
-          targets = [ "thumbv7em-none-eabihf" ];
+          targets = [
+            "thumbv7em-none-eabihf" # Bare Armv7E-M, hardfloat
+            "x86_64-unknown-none" # bare-metal x86_64, softfloat
+          ];
         };
       in
       with pkgs;

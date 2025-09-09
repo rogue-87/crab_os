@@ -24,10 +24,18 @@ nix develop --command fish
 
 this will install all the stuff you need for working with this project
 
-## Build
+## running the OS
 
-just run this command
+### Booting it in QEMU
 
 ```sh
 cargo run
+```
+
+### Booting it on a real machine
+
+if you're on linux, use the `dd` command to write the OS into the USB stick. sdX is the the device name of your USB stick.
+
+```sh
+dd if=target/x86_64-blog_os/debug/bootimage-blog_os.bin of=/dev/sdX && sync
 ```
